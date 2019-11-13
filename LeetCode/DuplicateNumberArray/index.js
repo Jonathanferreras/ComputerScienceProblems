@@ -37,14 +37,19 @@ for (int i = 0; i < len; i++) {
 
 
 var removeDuplicates = function(nums) {
-  for(let i = 0; i < nums.length; i++) {
-      let current = nums[i];
-      let next = nums[i+1];
-      
-      if(next && current === next) {
-          nums.splice(current, 1);
-      }
+  let count = 0;
+
+  while(count < nums.length) {
+    let prev = nums[count-1];
+    let curr = nums[count];
+
+    if(prev !== null && prev === curr) {
+      nums.splice(count, 1);
+    } 
+    else {
+      count++;
+    }
   }
-  
-  return nums.length;
+
+  return nums.length
 };
