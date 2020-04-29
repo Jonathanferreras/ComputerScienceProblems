@@ -1,0 +1,11 @@
+{
+  "name": "projecteuler",
+  "version": "1.0.0",
+  "description": "My solutions to coding problems on project euler",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
